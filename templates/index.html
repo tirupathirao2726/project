@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blog</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'first.css' %}">
+</head>
+<body>
+<h1 style="text-align: center;
+    font-style: oblique;">Welcome to Mr.cool Website</h1>
+{% for i in data %}
+<h1>{{i.title}}</h1>
+<i>{{i.created_at}}</i>
+<img src="{{i.img.url}}" style="width: auto;height:500px">
+<p>{{i.description}}</p>
+{% endfor %}
+</body>
+</html>
